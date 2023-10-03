@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Blood Donation Request Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Page Heading/Breadcrumbs -->
+      <h1 class="mt-4 mb-3">Request</h1>
+      <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+              <a href="D:\Study\SEM-3\FSD\FSD Individual Project\index.html">Home</a>
+          </li>
+          <li class="breadcrumb-item active">Request</li>
+      </ol>
+    </div>
+    <div class="container">
+      <h1 class="text-center">Blood Request Form</h1>
+      <form class="form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="bloodgroup">Blood Group:</label>
+          <select class="form-control" id="bloodgroup">
+            <option value="" disabled selected>Select your blood group</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="location">Location:</label>
+          <input type="text" class="form-control" id="location" placeholder="Enter your location" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+        </div>
+        <button type="submit" class="btn btn-danger btn-lg btn-block">Request Blood</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 600;
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+button.btn-primary {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+button.btn-primary:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}

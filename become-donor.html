@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BloodBank & Donor Management System | Become A Donor</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/modern-business.css" rel="stylesheet">
+    <style>
+    .navbar-toggler 
+    {
+        z-index: 1;
+    }
+    @media (max-width: 576px) 
+    {
+        nav > .container 
+        {
+            width: 100%;
+        }
+    }
+    </style>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/tether/tether.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script rel="stylesheet" type="text/JavaScript">
+        function validate_form()
+        {
+        // form inputs
+          var fullName = document.forms["donor"]["fullname"].value;
+          var mobileNo = document.forms["donor"]["mobileno"].value;
+          var emailid = document.forms["donor"]["emailid"].value;
+
+          // fullname validation re 
+          var fullnamePattern = /^[A-z]+$/;
+          if (!fullnamePattern.test(fullName)) {
+            alert("Please enter a valid full name.");
+            return false;
+          }
+
+          //  mobile number validation re
+          var mobileNoPattern = /^\d{10}$/;
+          if (!mobileNoPattern.test(mobileNo)) {
+            alert("Please enter a valid 10 digit mobile number.");
+            return false;
+          }
+
+          // email validation re
+          var emailidPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+          if (!emailidPattern.test(emailid)) {
+            alert("Please enter a valid email id.");
+            return false;
+          }
+          // form valid
+          return true;
+        }
+    </script>
+</head>
+<body>
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Page Heading/breadcrumbs -->
+        <h1 class="mt-4 mb-3">Become a Donor</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Become a Donor</li>
+        </ol>
+        <!-- Content Row -->
+        <form name="donor" method="post" action="" onsubmit=" return validate_form()">
+<div class="row">
+<div class="col-lg-4 mb-4">
+<div class="font-italic">Full Name<span style="color:red">*</span></div>
+<div><input type="text" name="fullname" class="form-control" required></div>
+</div>
+<div class="col-lg-4 mb-4">
+<div class="font-italic">Mobile Number<span style="color:red">*</span></div>
+<div><input type="number" name="mobileno" class="form-control" required></div>
+</div>
+<div class="col-lg-4 mb-4">
+<div class="font-italic">Email Id</div>
+<div><input type="email" name="emailid" class="form-control"></div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-4 mb-4">
+<div class="font-italic">Age<span style="color:red">*</span></div>
+<div><input type="number" name="age" class="form-control" required></div>
+</div>
+<div class="col-lg-4 mb-4">
+<div class="font-italic">Gender<span style="color:red">*</span></div>
+<div><select name="gender" class="form-control" required>
+<option value="">Select</option>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+</select>
+</div>
+</div>
+<div class="col-lg-4 mb-4">
+<div class="font-italic">Blood Group<span style="color:red">*</span> </div>
+<div><select name="bloodgroup" class="form-control" required>
+    <option value="">Select</option>
+    <option value="A+">A+</option>
+    <option value="A-">A-</option>
+    <option value="B+">B+</option>
+    <option value="B-">B-</option>
+    <option value="O+">O+</option>
+    <option value="O-">O-</option>
+    <option value="AB+">AB+</option>
+    <option value="AB-">AB-</option>
+</select>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-4 mb-4">
+<div class="font-italic">Address</div>
+<div><textarea class="form-control" name="address"></textarea></div>
+</div>
+<br><br>
+<div class="row">
+<div class="col-lg-4 mb-4">
+</div>
+</div>
+<!-- /.row -->   
+<!-- /.row -->
+</div>
+<div align="center"><input type="submit" name="submit" class="btn btn-primary btn-success" value="Submit" style="cursor:pointer;display:block;">
+<br><input type="reset" name="reset" class="btn btn-primary btn-danger" value="Reset" style="cursor:pointer;display:block;">
+</div>
+</form>
+</body>
+</html>
